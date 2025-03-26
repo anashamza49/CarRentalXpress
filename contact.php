@@ -31,8 +31,7 @@ if( !isset($_POST["nom"]))
     {
         $errMsg = "message obligatoire";
     }
-   
-        // Préparation de la requête SQL pour éviter les failles d'injection
+    
         include("db.php");
         $query = "INSERT INTO contact VALUES (NULL, '$nom', '$adress', '$objet', '$msg')";
         $conn->exec($query);
